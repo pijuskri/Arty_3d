@@ -35,8 +35,8 @@ public class Artilerry : MonoBehaviour
     }
     void Rotation()
     {
-        barrel.Rotate(new Vector3(Input.GetAxisRaw("Vertical"), 0, 0) * rotateSpeed * Time.deltaTime, Space.Self);
-        barrel.localRotation = Quaternion.Euler(Mathf.Clamp(barrel.localRotation.eulerAngles.x, 30, 85), barrel.localRotation.eulerAngles.y, barrel.localRotation.eulerAngles.z);
+        barrel.Rotate(new Vector3(-Input.GetAxisRaw("Vertical"), 0, 0) * rotateSpeed * Time.deltaTime, Space.Self);
+        barrel.localRotation = Quaternion.Euler(Mathf.Clamp(barrel.localRotation.eulerAngles.x, 10, 60), barrel.localRotation.eulerAngles.y, barrel.localRotation.eulerAngles.z);
         cannon.Rotate(new Vector3(0, Input.GetAxisRaw("Horizontal"), 0) * rotateSpeed * Time.deltaTime, Space.Self);
         //barrel.rotation = Quaternion.Euler(barrel.rotation.eulerAngles.x, 0, barrel.rotation.eulerAngles.z);
     }
@@ -63,7 +63,7 @@ public class Artilerry : MonoBehaviour
             shootCooldownTimer = shootCooldown;
             GameObject temp = Instantiate(shell,breach.position, barrel.rotation);
             //temp.GetComponent<Rigidbody>().AddForce(barrel.up*1000);
-            temp.GetComponent<Rigidbody>().velocity = barrel.up*20;
+            temp.GetComponent<Rigidbody>().velocity = -barrel.forward*20;
             shellJustShot = temp.transform;
             float dist = FinalShellDistance(temp.GetComponent<Rigidbody>());
             Instantiate(target, cannon.position + cannon.forward*dist, new Quaternion());
