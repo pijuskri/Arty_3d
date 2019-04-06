@@ -14,6 +14,8 @@ public class Artilerry : MonoBehaviour
     public GameObject target;
     public GameObject instantiatedTarget;
     public Text textAngle;
+    public AudioSource gunAudioSource;
+    public AudioClip shotSound;
     #endregion
 
     Transform shellJustShot;
@@ -88,6 +90,7 @@ public class Artilerry : MonoBehaviour
             //temp.GetComponent<Rigidbody>().AddForce(barrel.up*1000);
             temp.GetComponent<Rigidbody>().velocity = -barrel.forward*shootPower;
             shellJustShot = temp.transform;
+            gunAudioSource.PlayOneShot(shotSound);
         }
     }
     void Targeting()
