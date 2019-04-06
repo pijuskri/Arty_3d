@@ -38,7 +38,7 @@ public class Artilerry : MonoBehaviour
         CameraLogic();
         Rotation();
         Shoot();
-        Targeting();
+        //Targeting();
         UI();
     }
     void Rotation()
@@ -50,7 +50,7 @@ public class Artilerry : MonoBehaviour
     }
     void UI()
     {
-        textAngle.text = "Angle: " + String.Format("{0:F1}",barrel.transform.rotation.eulerAngles.x);
+        textAngle.text = "Angle: " + String.Format("{0:F1}",barrel.transform.rotation.eulerAngles.x) + '\n'+"Azimuth:"+ String.Format("{0:F1}", cannon.transform.rotation.eulerAngles.y);
     }
     void Timing()
     {
@@ -98,7 +98,7 @@ public class Artilerry : MonoBehaviour
         float height = barrel.position.y;
         if (Physics.Raycast(instantiatedTarget.transform.position, Vector3.down, out RaycastHit hit))
         {
-            height = hit.point.y;
+            height = hit.point.y+0.2f;
         }
         instantiatedTarget.transform.position = new Vector3(instantiatedTarget.transform.position.x, height, instantiatedTarget.transform.position.z);
         //Debug.Log(dist);
@@ -119,7 +119,7 @@ public class Artilerry : MonoBehaviour
         x = t * (vel.x);
         float z = t * (vel.z);
 
-        if (Physics.Raycast(instantiatedTarget.transform.position, Vector3.down, out hit)) { height = hit.point.y; if()}
+        //if (Physics.Raycast(instantiatedTarget.transform.position, Vector3.down, out hit)) { height = hit.point.y; if()}
         //Debug.Log(x);
         return new Vector3(x,0,z);
     }

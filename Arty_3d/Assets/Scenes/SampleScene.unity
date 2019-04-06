@@ -172,7 +172,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 58237712fb64d4141b26ceba15f5c301, type: 2}
+      objectReference: {fileID: 2100000, guid: b0d5707aea9ab594b821336b58f20067, type: 2}
     - target: {fileID: 6068014746217004858, guid: 132409714d2836f47960483c999143f3,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -1710,8 +1710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -80, y: 15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -80, y: 30}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750253705
 MonoBehaviour:
@@ -1939,6 +1939,7 @@ GameObject:
   - component: {fileID: 856048157}
   - component: {fileID: 856048156}
   - component: {fileID: 856048160}
+  - component: {fileID: 856048161}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2013,7 +2014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856048155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0080213845, y: 1.08, z: 45.8}
+  m_LocalPosition: {x: 9.85, y: 9.82, z: 45.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2032,6 +2033,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!54 &856048161
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856048155}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 10
+  m_CollisionDetection: 0
 --- !u!43 &917856299
 Mesh:
   m_ObjectHideFlags: 0
