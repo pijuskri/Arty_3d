@@ -95,12 +95,19 @@ public class Artilerry : MonoBehaviour
         if (instantiatedTarget == null) instantiatedTarget = Instantiate(target, new Vector3(), new Quaternion());
         Vector3 dist = FinalShellDistance(-barrel.forward * shootPower);
         instantiatedTarget.transform.position = cannon.position + dist;
-        instantiatedTarget.transform.position = new Vector3(instantiatedTarget.transform.position.x, 0, instantiatedTarget.transform.position.z);
+        float height = barrel.position.y;
+        if (Physics.Raycast(instantiatedTarget.transform.position, Vector3.down, out RaycastHit hit))
+        {
+            height = hit.point.y;
+        }
+        instantiatedTarget.transform.position = new Vector3(instantiatedTarget.transform.position.x, height, instantiatedTarget.transform.position.z);
         //Debug.Log(dist);
     }
     Vector3 FinalShellDistance(Vector3 vel)
     {
-        float landHeight=breach.position.y*1.8f;
+        float height = 0;
+        if (Physics.Raycast(instantiatedTarget.transform.position, Vector3.down, out RaycastHit hit)) height = hit.point.y;
+        float landHeight=breach.position.y*1.8f - height;
         float gravity = 12f;
         float x=0;
         float t=0;
@@ -111,6 +118,8 @@ public class Artilerry : MonoBehaviour
         else t = t2;
         x = t * (vel.x);
         float z = t * (vel.z);
+
+        if (Physics.Raycast(instantiatedTarget.transform.position, Vector3.down, out hit)) { height = hit.point.y; if()}
         //Debug.Log(x);
         return new Vector3(x,0,z);
     }
