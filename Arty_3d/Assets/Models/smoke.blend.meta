@@ -1,40 +1,14 @@
 fileFormatVersion: 2
-guid: 1954e9340704734448f791dae9dc4887
+guid: 569269e7207ddbd4db359872ad3141ca
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cube
-    100004: Cube_001
-    100006: Cylinder
-    100008: Pivot
-    100010: Platform
     400000: //RootNode
-    400002: Cube
-    400004: Cube_001
-    400006: Cylinder
-    400008: Pivot
-    400010: Platform
     2100000: unnamed
-    2100002: Material
-    2100004: Material_001
     2300000: //RootNode
-    2300002: Cube
-    2300004: Cube_001
-    2300006: Cylinder
-    2300008: Pivot
-    2300010: Platform
     3300000: //RootNode
-    3300002: Cube
-    3300004: Cube_001
-    3300006: Cylinder
-    3300008: Pivot
-    3300010: Platform
-    4300000: Cylinder
-    4300002: Cube_001
-    4300004: Cube
-    4300006: Platform
-    4300008: Pivot
+    4300000: Icosphere
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
