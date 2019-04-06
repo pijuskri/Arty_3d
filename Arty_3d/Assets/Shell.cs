@@ -5,7 +5,8 @@ using UnityEngine;
 public class Shell : MonoBehaviour
 {
     Rigidbody rigid;
-    float range = 5;
+    public AudioClip shellLand;
+    float range = 10;
     void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody>();
@@ -20,9 +21,9 @@ public class Shell : MonoBehaviour
     }
     void Drag()
     {
-        float gravity = 12f;
-        float drag = 0.01f;
-        //rigid.velocity -= (rigid.velocity * drag);
+        float gravity = 10f;
+        float drag = 0.005f;
+        rigid.velocity -= new Vector3( Mathf.Pow(rigid.velocity.x * drag, 2), Mathf.Pow(rigid.velocity.y * drag, 2), Mathf.Pow(rigid.velocity.z * drag, 2));
         rigid.velocity = new Vector3(rigid.velocity.x, rigid.velocity.y-(gravity*Time.deltaTime), rigid.velocity.z);
     }
     void HitGround()
@@ -34,8 +35,8 @@ public class Shell : MonoBehaviour
                 EnemyAI enemy = coll.gameObject.GetComponent<EnemyAI>();
                 float damage=0;
                 float distance = (transform.position - coll.transform.position).magnitude;
-                if (distance < 3) damage = 100;
-                else damage = 100 / Mathf.Pow(distance-2, 2);
+                if (distance < 5) damage = 100;
+                else damage = 100 / Mathf.Pow(distance-4, 2);
                 enemy.health -= damage;
             }
         }

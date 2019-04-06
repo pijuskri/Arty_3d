@@ -23,7 +23,7 @@ public class Artilerry : MonoBehaviour
     float rotateSpeed = 20;
     float shootCooldownTimer=0;
     float shootCooldown = 0.1f;
-    float shootPower = 28f;
+    float shootPower = 36f;
     CameraModes cameraMode=0;
     #endregion
     enum CameraModes{gun,follow,overview}
@@ -67,8 +67,8 @@ public class Artilerry : MonoBehaviour
         }
         if (cameraMode == CameraModes.gun)
         {
-            Camera.main.transform.position = new Vector3(cannon.position.x, cannon.position.y + 2, cannon.position.z - 3);
-            Camera.main.transform.rotation = Quaternion.Euler(30, 0, 0);
+            Camera.main.transform.position = new Vector3(cannon.position.x, cannon.position.y + 2, cannon.position.z - 4);
+            Camera.main.transform.rotation = Quaternion.Euler(10, 0, 0);
         }
         else if (cameraMode == CameraModes.follow && shellJustShot != null)
         {

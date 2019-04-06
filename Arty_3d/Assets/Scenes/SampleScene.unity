@@ -173,6 +173,16 @@ PrefabInstance:
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
       value: 0.47777778
       objectReference: {fileID: 0}
+    - target: {fileID: 4515842549089906571, guid: 132409714d2836f47960483c999143f3,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515842549089906571, guid: 132409714d2836f47960483c999143f3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132409714d2836f47960483c999143f3, type: 3}
 --- !u!4 &111646418 stripped
@@ -834,7 +844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856048155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.85, y: 9.82, z: 45.8}
+  m_LocalPosition: {x: 9.85, y: 8.13, z: 45.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -852,6 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219cc50c1c203bd449780549c2fabf62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 111646418}
   health: 100
 --- !u!54 &856048161
 Rigidbody:
@@ -920,7 +931,7 @@ MonoBehaviour:
   instantiatedTarget: {fileID: 0}
   textAngle: {fileID: 750253705}
   gunAudioSource: {fileID: 4515842549089906571}
-  shotSound: {fileID: 8300000, guid: 764cc20d635d89440b4a26c3d00aad39, type: 3}
+  shotSound: {fileID: 8300000, guid: deeacbca77d271844ad808e3ffde43e5, type: 3}
 --- !u!82 &4515842549089906571 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4515842549089906571, guid: 132409714d2836f47960483c999143f3,
