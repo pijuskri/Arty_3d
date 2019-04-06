@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shell : MonoBehaviour
 {
     Rigidbody rigid;
+    float range = 5;
     void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody>();
@@ -26,6 +27,18 @@ public class Shell : MonoBehaviour
     }
     void HitGround()
     {
+        foreach (var coll in Physics.OverlapSphere(transform.position,range))
+        {
+            if (coll.gameObject.GetComponent<EnemyAI>() != null)
+            {
+                EnemyAI enemy = coll.gameObject.GetComponent<EnemyAI>();
+                float damage=0;
+                float distance = (transform.position - coll.transform.position).magnitude;
+                if (distance < 3) damage = 100;
+                else damage = 100 / Mathf.Pow(distance-2, 2);
+                enemy.health -= damage;
+            }
+        }
         Destroy(gameObject);
 
     }

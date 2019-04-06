@@ -50,7 +50,7 @@ public class Artilerry : MonoBehaviour
     }
     void UI()
     {
-        textAngle.text = "Angle: " + barrel.transform.rotation.z;
+        textAngle.text = "Angle: " + String.Format("{0:F1}",barrel.transform.rotation.eulerAngles.x);
     }
     void Timing()
     {
@@ -75,7 +75,7 @@ public class Artilerry : MonoBehaviour
         }
         else if (cameraMode == CameraModes.overview)
         {
-            Camera.main.transform.position = new Vector3(20, 30, 20);
+            Camera.main.transform.position = new Vector3(20, 35, 25);
             Camera.main.transform.rotation = Quaternion.Euler(65, -90, 0);
         }
     }
