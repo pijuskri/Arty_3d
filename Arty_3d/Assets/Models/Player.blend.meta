@@ -108,6 +108,7 @@ ModelImporter:
     100204: Bone_037
     100206: Bone_038
     100208: Bone_039
+    100210: Cylinder
     400000: Arm_L
     400002: Arm_R
     400004: Base
@@ -213,12 +214,19 @@ ModelImporter:
     400204: Bone_037
     400206: Bone_038
     400208: Bone_039
+    400210: Cylinder
     2100000: Material_001
+    2100002: Steel_001
+    2100004: Wood_001
+    2300000: Cylinder
+    3300000: Cylinder
     4300000: CharacterModel_001
+    4300002: Cylinder
     7400000: Default Take
     7400002: Skelet_SkeletAction_SkeletAction
     7400004: Walk
     7400006: Tpose
+    7400008: Gun_Holding
     9500000: //RootNode
     13700000: CharacterModel_001
   externalObjects: {}
