@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1601313316841670603}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1601313316872330010}
   m_RootOrder: 0
@@ -40,13 +40,13 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601313316841670603}
   serializedVersion: 6
-  lengthInSec: 3
-  simulationSpeed: 1
-  stopAction: 0
+  lengthInSec: 5
+  simulationSpeed: 3
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -167,9 +167,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 10
-      minScalar: 5
+      minScalar: 8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1040,7 +1040,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.12437439
+          value: 0
           inSlope: 0.9312279
           outSlope: 0.9312279
           tangentMode: 0
@@ -1048,8 +1048,17 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.10685484
         - serializedVersion: 3
+          time: 0.5029776
+          value: 0.8783777
+          inSlope: 0.000004510122
+          outSlope: 0.000004510122
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.2658985
+        - serializedVersion: 3
           time: 1
-          value: 1
+          value: 0
           inSlope: 0.44498813
           outSlope: 0.44498813
           tangentMode: 0
@@ -4783,7 +4792,7 @@ Transform:
   m_GameObject: {fileID: 1601313316872329991}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 5.916391, y: 1.8923006, z: -12.364857}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1601313316841670600}
   m_Father: {fileID: 0}
@@ -4797,13 +4806,13 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601313316872329991}
   serializedVersion: 6
-  lengthInSec: 3
-  simulationSpeed: 1
+  lengthInSec: 5
+  simulationSpeed: 3
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4924,8 +4933,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 7
+      minMaxState: 3
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5363,7 +5372,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5797,7 +5806,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.3930359
+          value: 0.4606018
           inSlope: 2.024734
           outSlope: 2.024734
           tangentMode: 0
@@ -5805,8 +5814,17 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.07862903
         - serializedVersion: 3
-          time: 1
+          time: 0.51353675
           value: 1
+          inSlope: 0.032782793
+          outSlope: 0.032782793
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.9909973
+          value: 0.040540695
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -7050,7 +7068,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -2
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -9469,7 +9487,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7a64c5d1140a25d4c8db41a532c99397, type: 2}
+  - {fileID: 2100000, guid: 26506009a2d218446b03634e115634b3, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

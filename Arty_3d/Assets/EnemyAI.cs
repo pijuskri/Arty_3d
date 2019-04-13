@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     public Transform player;
     public float health = 100;
+    float speed = 3;
     void Start()
     {
         
@@ -23,6 +24,6 @@ public class EnemyAI : MonoBehaviour
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, rot_z - 90, 0);
 
-        transform.position=Vector3.MoveTowards(transform.position, player.position,Time.deltaTime);
+        transform.position=Vector3.MoveTowards(transform.position, player.position,Time.deltaTime*speed);
     }
 }
